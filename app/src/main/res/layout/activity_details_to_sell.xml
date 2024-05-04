@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constrain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/sd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Selling Details"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/cn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Crop Name: "
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sd" />
+
+            <TextView
+                android:id="@+id/CropNametxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="56dp"
+                android:text="Crop Name"
+                android:textSize="23sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/cn"
+                app:layout_constraintStart_toEndOf="@id/cn"
+                app:layout_constraintTop_toBottomOf="@+id/sd" />
+
+
+            <EditText
+                android:id="@+id/CropNameEdt"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_custom"
+                android:gravity="left"
+                android:padding="5dp"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/cn"
+                app:layout_constraintBottom_toTopOf="@+id/quantity"
+                app:layout_constraintStart_toEndOf="@+id/cn"
+                app:layout_constraintTop_toBottomOf="@+id/sd"
+                android:visibility="invisible"
+                />
+
+            <TextView
+                android:id="@+id/qn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Quantity: "
+                android:textSize="18sp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@+id/pk"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cn" />
+
+            <EditText
+                android:id="@+id/quantity"
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:background="@drawable/edit_text_custom"
+                android:gravity="left"
+                android:inputType="number"
+                android:padding="5dp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/qn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.76"
+                app:layout_constraintStart_toEndOf="@+id/qn" />
+
+            <TextView
+                android:id="@+id/pk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Price per Kg: "
+                android:textSize="18dp"
+                app:layout_constraintBottom_toTopOf="@+id/lc"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/qn" />
+
+            <EditText
+                android:id="@+id/Price"
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:background="@drawable/edit_text_custom"
+                android:gravity="left"
+                android:inputType="number"
+                android:padding="5dp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/pk"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.651"
+                app:layout_constraintStart_toEndOf="@+id/pk" />
+
+            <TextView
+                android:id="@+id/lc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Enter Location: "
+                android:textSize="18dp"
+                app:layout_constraintBottom_toTopOf="@+id/dl"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pk" />
+
+            <EditText
+                android:id="@+id/location"
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:background="@drawable/edit_text_custom"
+                android:gravity="left"
+                android:padding="5dp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/lc"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/lc" />
+
+            <TextView
+                android:id="@+id/dl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Delivery Options: "
+                android:textSize="18dp"
+                app:layout_constraintBottom_toTopOf="@+id/localPickUp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lc" />
+
+            <CheckBox
+                android:id="@+id/localPickUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Local PickUp"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toTopOf="@+id/MarketPick"
+                app:layout_constraintEnd_toStartOf="@+id/HomeDelivery"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dl" />
+
+            <CheckBox
+                android:id="@+id/HomeDelivery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Home Delivery"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toTopOf="@+id/Shipping"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/localPickUp"
+                app:layout_constraintTop_toBottomOf="@+id/dl" />
+
+
+            <CheckBox
+                android:id="@+id/MarketPick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Market PickUp"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toTopOf="@+id/qb"
+                app:layout_constraintEnd_toStartOf="@+id/Shipping"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/localPickUp" />
+
+            <CheckBox
+                android:id="@+id/Shipping"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shipping"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toTopOf="@+id/qb"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/MarketPick"
+                app:layout_constraintTop_toBottomOf="@+id/HomeDelivery" />
+
+            <TextView
+                android:id="@+id/qb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Minimum Quantity to Buy: "
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/pn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/MarketPick" />
+
+            <EditText
+                android:id="@+id/MinQuantityBuy"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:background="@drawable/edit_text_custom"
+                android:gravity="left"
+                android:inputType="number"
+                android:padding="5dp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/qb"
+                app:layout_constraintStart_toEndOf="@+id/qb" />
+
+            <TextView
+                android:id="@+id/pn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Phone Number: "
+                android:textSize="18sp"
+
+                app:layout_constraintBottom_toTopOf="@+id/description"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/qb" />
+
+            <EditText
+                android:id="@+id/PhoneNumber"
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/edit_text_custom"
+                android:gravity="left"
+                android:inputType="number"
+                android:padding="5dp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/pn"
+                app:layout_constraintBottom_toTopOf="@+id/description"
+                app:layout_constraintStart_toEndOf="@+id/pn" />
+
+
+            <EditText
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/edit_text_custom"
+                android:gravity="left"
+                android:hint="Enter the description of the crop here."
+                android:inputType="textMultiLine"
+                android:lines="5"
+                android:padding="10dp"
+                app:layout_constraintBottom_toTopOf="@+id/sellDetailsSubmitBtn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pn" />
+
+            <Button
+                android:id="@+id/sellDetailsSubmitBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/mediumPurple"
+                android:text="Submit"
+                android:layout_marginTop="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/description"
+                app:layout_constraintHorizontal_bias="0.495"
+                app:layout_constraintStart_toStartOf="@+id/description"
+                app:layout_constraintTop_toBottomOf="@+id/description"
+
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

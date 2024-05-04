@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constrain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/sd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Details"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/cn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Crop Name: "
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sd" />
+
+            <TextView
+                android:id="@+id/CropNametxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="56dp"
+                android:text="Crop Name"
+                android:textSize="23sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/cn"
+                app:layout_constraintStart_toEndOf="@id/cn"
+                app:layout_constraintTop_toBottomOf="@+id/sd" />
+
+
+            <TextView
+                android:id="@+id/qn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Quantity: "
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cn" />
+
+            <TextView
+                android:id="@+id/quantity"
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:text="quntity"
+                android:textSize="18sp"
+                android:layout_marginLeft="10dp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/qn"
+
+                app:layout_constraintHorizontal_bias="0.76"
+                app:layout_constraintStart_toEndOf="@+id/qn" />
+
+            <TextView
+                android:id="@+id/pk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Price per Kg: "
+                android:textSize="18sp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/qn" />
+
+            <TextView
+                android:id="@+id/Price"
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:text="price"
+                android:textSize="18sp"
+                android:layout_marginLeft="10dp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/pk"
+                app:layout_constraintStart_toEndOf="@+id/pk" />
+
+            <TextView
+                android:id="@+id/lc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Given Location: "
+                android:textSize="18dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pk" />
+
+            <TextView
+                android:id="@+id/location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="location"
+                android:textSize="18sp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/lc"
+                app:layout_constraintStart_toStartOf="@+id/lc" />
+
+            <TextView
+                android:id="@+id/dl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Delivery Options: "
+                android:textSize="18dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/location" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Checked delivery options"
+                android:textSize="18sp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintTop_toBottomOf="@+id/dl"
+                app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/checkedOption"
+                />
+
+            <TextView
+                android:id="@+id/qb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Minimum Quantity to Buy: "
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintBottom_toTopOf="@+id/pn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkedOption" />
+
+            <TextView
+                android:id="@+id/MinQuantityBuy"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:text="minimum Quntity"
+                android:textSize="18sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/qb"
+                app:layout_constraintStart_toEndOf="@+id/qb" />
+
+            <TextView
+                android:id="@+id/pn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Phone Number: "
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/qb" />
+
+            <TextView
+                android:id="@+id/PhoneNumber"
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:text="phone"
+                android:textSize="18sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/pn"
+                app:layout_constraintStart_toEndOf="@+id/pn" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Description: "
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pn"
+                android:id="@+id/des"
+                />
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:text="Description"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/des" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                app:layout_constraintTop_toBottomOf="@+id/description"
+                android:src="@drawable/crop_img"
+                android:layout_marginTop="20dp"
+                android:id="@+id/soldImage"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

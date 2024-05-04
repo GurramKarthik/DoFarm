@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".RegisterActivity">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        android:elevation="30dp"
+        android:backgroundTint="#008080"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="20dp"
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sing Up"
+                android:textColor="@color/white"
+                android:textSize="36sp"
+                />
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Full Name"
+                android:id="@+id/newUser"
+                android:layout_marginTop="10dp"
+                android:paddingStart="10dp"
+                android:background="@drawable/edit_text_2"
+                android:drawableLeft="@drawable/person"
+                />
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Phone Number"
+                android:inputType="number"
+                android:background="@drawable/edit_text_2"
+                android:layout_marginTop="20dp"
+                android:paddingStart="10dp"
+                android:id="@+id/phoneNum"
+                android:drawableLeft="@drawable/phone"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Email"
+                android:paddingStart="10dp"
+                android:background="@drawable/edit_text_2"
+                android:layout_marginTop="20dp"
+                android:id="@+id/Email"
+                android:inputType="textEmailAddress"
+                android:drawableLeft="@drawable/email"
+                />
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Password "
+                android:paddingStart="10dp"
+                android:background="@drawable/edit_text_2"
+                android:layout_marginTop="20dp"
+                android:id="@+id/password"
+                android:inputType="textPassword"
+                android:drawableLeft="@drawable/password"
+                />
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#938A5F"
+                android:layout_marginTop="20dp"
+                android:text="Register"
+                android:id="@+id/register"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Already Have an account"
+                android:textColor="@color/white"
+                android:id="@+id/existLogin"
+                android:layout_marginTop="10dp"
+                />
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
